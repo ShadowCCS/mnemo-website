@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mnemo - Study Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/logo.svg" alt="mnemo logo">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="download.html" class="nav-link">Download</a>
+                </li>
+                <li class="nav-item">
+                    <a href="docs.html" class="nav-link">Docs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">mnemo</span>
+                        <span class="version">
+                            <i class="ti ti-git-branch"></i>
+                            Version 2.0
+                        </span>
+                    </h1>
+                    <p class="hero-description">
+                        Mnemo is a free, open-source, cross-platform study application designed to help you learn and grow.
+                        It is a powerful tool that gives you everything you need, from mindmaps, flashcard, learning paths, mindmaps, games and more.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="download.html" class="btn btn-primary">
+                            <i class="ti ti-download"></i>
+                            Download
+                        </a>
+                        <a href="docs.html" class="btn btn-secondary">
+                            <i class="ti ti-book"></i>
+                            View Documentation
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <i class="ti ti-brand-tabler"></i>
+                            <h3>Open-Source and Free</h3>
+                            <p>We believe in the power of open-source and free software.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="ti ti-apps"></i>
+                            <h3>Cross-Platform</h3>
+                            <p>Is available on Windows, macOS, Linux, and Android</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="ti ti-clock"></i>
+                            <h3>Tons of Features</h3>
+                            <p>Has a lot of features, including Mindmaps, Flashcards, Learning Paths, Games, and more</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="ti ti-accessible"></i>
+                            <h3>Accessible & Extentions</h3>
+                            <p>Includes accessibility features through our extensions system</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="showcase-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Showcase</h2>
+            </div>
+
+            <div class="showcase-container">
+                <button class="showcase-nav prev">
+                    <i class="ti ti-chevron-left"></i>
+                </button>
+                <div class="image-grid showcase-grid">
+                    <div>
+                        <img src="assets/docs/dashboard.svg" alt="showcase1" class="article-image">
+                        <p class="image-caption">Dashboard</p>
+                    </div>
+                    <div>
+                        <img src="assets/docs/games.svg" alt="showcase2" class="article-image">
+                        <p class="image-caption">Games</p>
+                    </div>
+                    <div>
+                        <img src="assets/docs/settings.svg" alt="showcase3" class="article-image">
+                        <p class="image-caption">Settings</p>
+                    </div>
+                </div>
+                <button class="showcase-nav next">
+                    <i class="ti ti-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose mnemo?</h2>
+                <p class="section-subtitle">See how mnemo stands out from traditional study methods</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <div class="comparison-header mnemo">
+                        <h3>mnemo</h3>
+                        <span class="price">Free Forever</span>
+                    </div>
+                    <ul class="comparison-features">
+                        <li><i class="ti ti-check"></i> Cross-platform synchronization</li>
+                        <li><i class="ti ti-check"></i> Interactive learning games</li>
+                        <li><i class="ti ti-check"></i> Customizable learning paths</li>
+                        <li><i class="ti ti-check"></i> Progress analytics</li>
+                        <li><i class="ti ti-check"></i> Extensible plugin system</li>
+                        <li><i class="ti ti-check"></i> Offline access</li>
+                        <li><i class="ti ti-check"></i> Community-driven</li>
+                        <li><i class="ti ti-check"></i> No ads or tracking</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-header traditional">
+                        <h3>Traditional Methods</h3>
+                        <span class="price">Variable Cost</span>
+                    </div>
+                    <ul class="comparison-features">
+                        <li><i class="ti ti-x"></i> Paper-based, easily lost</li>
+                        <li><i class="ti ti-x"></i> Limited engagement options</li>
+                        <li><i class="ti ti-x"></i> Fixed learning structure</li>
+                        <li><i class="ti ti-x"></i> Manual progress tracking</li>
+                        <li><i class="ti ti-x"></i> No customization options</li>
+                        <li><i class="ti ti-x"></i> Physical storage required</li>
+                        <li><i class="ti ti-x"></i> Individual learning only</li>
+                        <li><i class="ti ti-x"></i> Resource intensive</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comparison-header other-apps">
+                        <h3>Other Apps</h3>
+                        <span class="price">$5-15/month</span>
+                    </div>
+                    <ul class="comparison-features">
+                        <li><i class="ti ti-minus"></i> Limited platform support</li>
+                        <li><i class="ti ti-minus"></i> Basic study features</li>
+                        <li><i class="ti ti-minus"></i> Preset learning paths</li>
+                        <li><i class="ti ti-minus"></i> Basic statistics</li>
+                        <li><i class="ti ti-minus"></i> Closed ecosystems</li>
+                        <li><i class="ti ti-check"></i> Online access</li>
+                        <li><i class="ti ti-minus"></i> Subscription required</li>
+                        <li><i class="ti ti-minus"></i> Contains ads/tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Quote Section -->
+        <section id="quote" class="quote-section">
+            <div class="container">
+                <blockquote class="inspirational-quote">
+                    <i class="ti ti-quote"></i>
+                    <p>"Education is not the learning of facts, but the training of the mind to think."</p>
+                    <footer>— Albert Einstein</footer>
+                </blockquote>
+            </div>
+        </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="docs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Documentation</h2>
+                <p class="section-subtitle">Everything you need to get started and master mnemo</p>
+            </div>
+
+            <div class="docs-grid">
+                <div class="docs-category">
+                    <h3><i class="ti ti-rocket"></i> Getting Started</h3>
+                    <div class="docs-links">
+                        <a href="docs.html#quick-start" class="doc-link">
+                            <span>Quick Start Guide</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                        <a href="docs.html#installation" class="doc-link">
+                            <span>Installation Instructions</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                        <a href="docs.html#first-session" class="doc-link">
+                            <span>First Study Session</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="docs-category">
+                    <h3><i class="ti ti-settings"></i> Features</h3>
+                    <div class="docs-links">
+                        <a href="docs.html#note-organization" class="doc-link">
+                            <span>Note Organization</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                        <a href="docs.html#study-timer" class="doc-link">
+                            <span>Study Timer & Pomodoro</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                        <a href="docs.html#progress-analytics" class="doc-link">
+                            <span>Progress Analytics</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                        <a href="docs.html#collaboration" class="doc-link">
+                            <span>Collaboration Tools</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="docs-category">
+                    <h3><i class="ti ti-help-circle"></i> Support</h3>
+                    <div class="docs-links">
+                        <a href="docs.html#troubleshooting" class="doc-link">
+                            <span>Troubleshooting</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                        <a href="docs.html#faq" class="doc-link">
+                            <span>FAQ</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                        <a href="docs.html#contact" class="doc-link">
+                            <span>Contact Support</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="docs-category">
+                    <h3><i class="ti ti-code"></i> Advanced</h3>
+                    <div class="docs-links">
+                        <a href="docs.html#api" class="doc-link">
+                            <span>API Reference</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                        <a href="docs.html#plugins" class="doc-link">
+                            <span>Plugin Development</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                        <a href="docs.html#customization" class="doc-link">
+                            <span>Customization Guide</span>
+                            <i class="ti ti-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.svg" alt="Mnemo Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="docs.html#contact">Support</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 mnemo. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal Overlay -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close"><i class="ti ti-square-rounded-x"></i></span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
