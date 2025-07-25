@@ -1,0 +1,201 @@
+                    <!-- Installation Guide -->
+                    <article class="doc-article">
+                        <header class="article-header">
+                            <h1 id="installation">Installation Guide</h1>
+                            <p class="article-meta">
+                                <span>Last updated: July 17, 2025</span>
+                                <span>4 min read</span>
+                            </p>
+                        </header>
+
+                        <div class="article-content">
+                            <p class="lead">
+                                Follow these step-by-step instructions to install mnemo on your device. The process is straightforward and should take only a few minutes.
+                            </p>
+
+                            <!-- System Requirements -->
+                            <div class="system-requirements">
+                                <h2>System Requirements</h2>
+                                <div class="requirements-tabs">
+                                    <div class="tab-buttons">
+                                        <button class="tab-button active" data-tab="windows">
+                                            <i class="fab fa-windows"></i>
+                                            Windows
+                                        </button>
+                                        <button class="tab-button" data-tab="macos">
+                                            <i class="fab fa-apple"></i>
+                                            macOS
+                                        </button>
+                                        <button class="tab-button" data-tab="linux">
+                                            <i class="fab fa-linux"></i>
+                                            Linux
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="tab-content active" id="windows-requirements">
+                                        <div class="requirements-grid">
+                                            <div class="requirement-item">
+                                                <strong>OS:</strong> Windows 10 (64-bit) or Windows 11
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>RAM:</strong> 4GB minimum, 8GB recommended
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Storage:</strong> 500MB free space
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Display:</strong> 1280x720 minimum resolution
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Network:</strong> Internet connection required for sync
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Other:</strong> .NET Framework 4.7.2 or later
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tab-content" id="macos-requirements">
+                                        <div class="requirements-grid">
+                                            <div class="requirement-item">
+                                                <strong>OS:</strong> macOS 10.15 (Catalina) or later
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>RAM:</strong> 4GB minimum, 8GB recommended
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Storage:</strong> 500MB free space
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Display:</strong> 1280x720 minimum resolution
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Network:</strong> Internet connection required for sync
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Other:</strong> Apple Silicon and Intel Macs supported
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tab-content" id="linux-requirements">
+                                        <div class="requirements-grid">
+                                            <div class="requirement-item">
+                                                <strong>OS:</strong> Ubuntu 18.04+, Debian 10+, or equivalent
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>RAM:</strong> 4GB minimum, 8GB recommended
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Storage:</strong> 500MB free space
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Display:</strong> 1280x720 minimum resolution
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Network:</strong> Internet connection required for sync
+                                            </div>
+                                            <div class="requirement-item">
+                                                <strong>Other:</strong> X11 or Wayland display server
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h2>Download Options</h2>
+                            <p>
+                                Choose the appropriate version for your operating system from our 
+                                <a href="download.html">download page</a>.
+                            </p>
+
+                            <h2>Installation Steps</h2>
+                            
+                            <div class="tabbed-instructions">
+                                <div class="tab-buttons">
+                                    <button class="tab-btn active" data-os="windows">Windows</button>
+                                    <button class="tab-btn" data-os="macos">macOS</button>
+                                    <button class="tab-btn" data-os="linux">Linux</button>
+                                </div>
+
+                                <div class="tab-content active" data-os="windows">
+                                    <ol>
+                                        <li>Double-click the downloaded mnemo_setup.exe file</li>
+                                        <li>If prompted by Windows Defender, click "More info" and "Run anyway"</li>
+                                        <li>Follow the installation wizard prompts</li>
+                                        <li>Choose your installation directory (default recommended)</li>
+                                        <li>Click "Install" and wait for completion</li>
+                                    </ol>
+                                </div>
+
+                                <div class="tab-content" data-os="macos">
+                                    <ol>
+                                        <li>Open the downloaded .dmg file</li>
+                                        <li>Drag the mnemo icon to the Applications folder</li>
+                                        <li>Right-click mnemo in Applications and select "Open"</li>
+                                        <li>Click "Open" when prompted about unverified developer</li>
+                                        <li>Grant necessary permissions when prompted</li>
+                                    </ol>
+                                </div>
+
+                                <div class="tab-content" data-os="linux">
+                                    <h4>Using .deb (Ubuntu/Debian):</h4>
+                                    <pre><code>sudo dpkg -i mnemo.deb
+sudo apt-get install -f</code></pre>
+
+                                    <h4>Using .rpm (Fedora/RHEL):</h4>
+                                    <pre><code>sudo rpm -i mnemo.rpm</code></pre>
+
+                                    <h4>Using .AppImage:</h4>
+                                    <ol>
+                                        <li>Make the AppImage executable: <code>chmod +x mnemo.AppImage</code></li>
+                                        <li>Double-click to run or execute from terminal</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <h2>Post-Installation</h2>
+                            <p>After installation, you should:</p>
+                            <ol>
+                                <li>Launch mnemo from your start menu or applications folder</li>
+                                <li>Take the tour to get familiar with the key features</li>
+                            </ol>
+
+                            <div class="troubleshooting-box">
+                                <h3>Common Installation Issues</h3>
+                                <ul>
+                                    <li><strong>Windows Defender blocking:</strong> Use "Run anyway" option</li>
+                                    <li><strong>macOS security warning:</strong> Open from Applications folder</li>
+                                    <li><strong>Linux dependencies:</strong> Run <code>sudo apt-get install -f</code></li>
+                                </ul>
+                                <p>For more help, visit our <a href="#troubleshooting">troubleshooting guide</a>.</p>
+                            </div>
+                        </div>
+
+                        <footer class="article-footer">
+                            <div class="article-navigation">
+                                <div class="nav-previous">
+                                    <span>Previous</span>
+                                    <a href="#quick-start">Quick Start Guide</a>
+                                </div>
+                                <div class="nav-next">
+                                    <span>Next</span>
+                                    <a href="#first-session">First Study Session</a>
+                                </div>
+                            </div>
+                            
+                            <div class="article-feedback">
+                                <p>Was this helpful?</p>
+                                <div class="feedback-buttons">
+                                    <button class="feedback-btn positive">
+                                        <i class="ti ti-thumb-up"></i>
+                                        Yes
+                                    </button>
+                                    <button class="feedback-btn negative">
+                                        <i class="ti ti-thumb-down"></i>
+                                        No
+                                    </button>
+                                </div>
+                            </div>
+                        </footer>
+                    </article>

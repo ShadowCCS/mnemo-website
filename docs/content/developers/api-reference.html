@@ -1,0 +1,277 @@
+                    <!-- API Reference -->
+                    <article class="doc-article">
+                        <header class="article-header">
+                            <h1 id="api">API Reference</h1>
+                            <p class="article-meta">
+                                <span>Last updated: July 24, 2025</span>
+                                <span>10 min read</span>
+                            </p>
+                        </header>
+
+                        <div class="article-content">
+                            <p class="lead">
+                                The Mnemo API is a tool that creates a path between application and code. As a developer, you can use the API to get, set create functionallity within the application.
+                            </p>
+
+                            <h2>Basics</h2>
+                            <p>
+                                The API follows a simple pattern, you can get, set, modify and create within the application.
+                            </p>
+
+                            <p>
+                                The base of the API is this command: <code>mnemo.api.category.function()</code>
+                            </p>
+                            <p>
+                                The categories are (with examples): 
+                            </p>
+                            <ul>
+                                <li><strong>content</strong> - E.g: get(), set(), modify(), create()</li>
+                                <li><strong>ui</strong> - E.g: showModal(), toast()</li>
+                                <li><strong>system</strong> - E.g: readFile(), writeFile()</li>
+                                <li><strong>events</strong> - E.g: subscribe(), unsubscribe(), OnPathCreated(), onFileChanged()</li>
+                                <li><strong>ai</strong> - E.g: generatePath(), prompt(), summarize(), translate()</li>
+                                <li><strong>settings</strong> - E.g: get("Language"), set("Language", "en"), set("theme", "dawn")</li>
+                                <li><strong>extension</strong> - E.g: getID(), getPath(), openStorage()</li>
+                                <li><strong>tools</strong> - E.g: log(), formatDate(), sanitize(), getVersion()</li>
+
+                            </ul>
+
+                            <p>
+                                A complete set of functions can be found in the <a href="https://github.com/mnemo-org/mnemo/blob/main/docs/api.md" target="_blank" rel="noopener noreferrer">API Reference</a>
+                            </p>
+                            <h2>A few examples</h2>
+                            <p>
+                                The api can be used in a few different ways, here are a few examples:
+                            </p>
+                            <ul>
+                            <li><code>string current_theme = mnemo.api.settings.getTheme()</code></li>
+                            <li><code>bool is_key_down = mnemo.api.get.keydown("F1")</code></li>
+                            <li><code>string keydown = mnemo.api.get.keydown()</code></li>
+                            <li><code>mnemo.api.ui.createOverlay("myOverlayView.axaml","MyOverlayViewModel.cs","MyOverlayView.axaml.cs")</code></li>
+                            <li><code>mnemo.api.ai.generatePath("First Aid", "Generate a path for first aid training")</code></li>
+                        </ul>
+
+                            <div class="api-section">
+                                <h3>Notification Service</h3>
+                                <p>
+                                    Send notifications to users and handle notification interactions:
+                                </p>
+                                <pre><code>// Send a notification
+INotificationService notificationService = ServiceProvider.GetService&lt;INotificationService&gt;();
+await notificationService.SendNotificationAsync(new NotificationOptions 
+{
+    Title = "Study Reminder",
+    Message = "Time for your daily review!",
+    Type = NotificationType.Reminder
+});</code></pre>
+
+                                <div class="api-methods">
+                                    <h4>Key Methods</h4>
+                                    <ul>
+                                        <li><code>SendNotificationAsync()</code> - Send a notification</li>
+                                        <li><code>ScheduleNotificationAsync()</code> - Schedule a future notification</li>
+                                        <li><code>CancelNotification()</code> - Cancel a pending notification</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="api-section">
+                                <h3>Data Service</h3>
+                                <p>
+                                    Access and manage study data:
+                                </p>
+                                <pre><code>// Access study data
+IDataService dataService = ServiceProvider.GetService&lt;IDataService&gt;();
+var flashcards = await dataService.GetFlashcardsAsync(deckId);
+var notes = await dataService.GetNotesAsync(subjectId);</code></pre>
+
+                                <div class="api-methods">
+                                    <h4>Key Methods</h4>
+                                    <ul>
+                                        <li><code>GetFlashcardsAsync()</code> - Retrieve flashcard data</li>
+                                        <li><code>GetNotesAsync()</code> - Access study notes</li>
+                                        <li><code>GetQuizzesAsync()</code> - Retrieve quiz data</li>
+                                        <li><code>GetMindMapsAsync()</code> - Access mind map data</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="api-section">
+                                <h3>Theme Service</h3>
+                                <p>
+                                    Manage application theming and styling:
+                                </p>
+                                <pre><code>// Access theme service
+IThemeService themeService = ServiceProvider.GetService&lt;IThemeService&gt;();
+await themeService.SetThemeAsync(ThemeType.Dark);
+var currentTheme = themeService.CurrentTheme;</code></pre>
+
+                                <div class="api-methods">
+                                    <h4>Key Methods</h4>
+                                    <ul>
+                                        <li><code>SetThemeAsync()</code> - Change the application theme</li>
+                                        <li><code>GetThemeColors()</code> - Get current theme colors</li>
+                                        <li><code>ApplyCustomTheme()</code> - Apply a custom theme</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h2>Extension Development</h2>
+                            <p>
+                                When developing extensions, you'll need to implement the following interfaces:
+                            </p>
+
+                            <pre><code>public class MyExtension : IExtension
+{
+    public string Name => "My Extension";
+    public string Description => "Description of my extension";
+    public string Version => "1.0.0";
+
+    public Task InitializeAsync()
+    {
+        // Initialize your extension
+    }
+
+    public Task ShutdownAsync()
+    {
+        // Cleanup when extension is disabled
+    }
+}</code></pre>
+
+                            <div class="info-box">
+                                <i class="ti ti-info-square-rounded"></i>
+                                <div>
+                                    <strong>Note:</strong> Extensions must be signed with a valid developer certificate before they can be published to the mnemo store.
+                                </div>
+                            </div>
+
+                            <h2>Game Development</h2>
+                            <p>
+                                Games are built using MonoGame and must implement the IGame interface:
+                            </p>
+
+                            <pre><code>public class MyGame : IGame
+{
+    public string Name => "My Educational Game";
+    public string Description => "A fun way to learn!";
+    public string Version => "1.0.0";
+
+    public Task&lt;GameData&gt; LoadDataAsync()
+    {
+        // Load study data for the game
+    }
+
+    public Task StartGameAsync()
+    {
+        // Initialize and start the game
+    }
+}</code></pre>
+
+                            <div class="tip-box">
+                                <i class="ti ti-bulb"></i>
+                                <div>
+                                    <strong>Pro Tip:</strong> Use the DataService to load study materials that your game will use, such as flashcards or quiz questions.
+                                </div>
+                            </div>
+
+                            <h2>Event System</h2>
+                            <p>
+                                mnemo uses an event-driven architecture. Subscribe to events to respond to user actions and system changes:
+                            </p>
+
+                            <pre><code>// Subscribe to events
+IEventService eventService = ServiceProvider.GetService&lt;IEventService&gt;();
+eventService.Subscribe&lt;StudySessionStartedEvent&gt;(OnStudySessionStarted);
+eventService.Subscribe&lt;ThemeChangedEvent&gt;(OnThemeChanged);</code></pre>
+
+                            <h3>Common Events</h3>
+                            <ul>
+                                <li><code>StudySessionStartedEvent</code> - Fired when a study session begins</li>
+                                <li><code>StudySessionEndedEvent</code> - Fired when a study session ends</li>
+                                <li><code>ThemeChangedEvent</code> - Fired when the application theme changes</li>
+                                <li><code>DataChangedEvent</code> - Fired when study data is modified</li>
+                            </ul>
+
+                            <h2>Best Practices</h2>
+                            <p>
+                                Follow these guidelines when using the API:
+                            </p>
+
+                            <ul>
+                                <li>Always use dependency injection to access services</li>
+                                <li>Handle exceptions appropriately</li>
+                                <li>Dispose of resources properly</li>
+                                <li>Use async/await for asynchronous operations</li>
+                                <li>Follow the MVVM pattern</li>
+                                <li>Respect user privacy and data security</li>
+                            </ul>
+
+                            <h2>API Versioning</h2>
+                            <p>
+                                The mnemo API follows semantic versioning:
+                            </p>
+
+                            <ul>
+                                <li>Major version changes indicate breaking changes</li>
+                                <li>Minor version changes add new features</li>
+                                <li>Patch version changes fix bugs</li>
+                            </ul>
+
+                            <div class="info-box">
+                                <i class="ti ti-info-square-rounded"></i>
+                                <div>
+                                    <strong>Note:</strong> Always specify the minimum required API version in your extension or game manifest.
+                                </div>
+                            </div>
+
+                            <h2>Next Steps</h2>
+                            <p>
+                                Ready to start building? Check out these resources:
+                            </p>
+                            
+                            <div class="next-steps-grid">
+                                <a href="#extensions" class="next-step-card">
+                                    <i class="ti ti-puzzle"></i>
+                                    <h3>Create Extensions</h3>
+                                    <p>Build your first extension</p>
+                                </a>
+                                <a href="#games" class="next-step-card">
+                                    <i class="ti ti-device-gamepad"></i>
+                                    <h3>Develop Games</h3>
+                                    <p>Create educational games</p>
+                                </a>
+                                <a href="#samples" class="next-step-card">
+                                    <i class="ti ti-code"></i>
+                                    <h3>Sample Code</h3>
+                                    <p>View example projects</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <footer class="article-footer">
+                            <div class="article-navigation">
+                                <div class="nav-previous">
+                                    <span>Previous</span>
+                                    <a href="#contribute-code">Contribute Code</a>
+                                </div>
+                                <div class="nav-next">
+                                    <span>Next</span>
+                                    <a href="#extensions">Create Extensions</a>
+                                </div>
+                            </div>
+                            
+                            <div class="article-feedback">
+                                <p>Was this helpful?</p>
+                                <div class="feedback-buttons">
+                                    <button class="feedback-btn positive">
+                                        <i class="ti ti-thumb-up"></i>
+                                        Yes
+                                    </button>
+                                    <button class="feedback-btn negative">
+                                        <i class="ti ti-thumb-down"></i>
+                                        No
+                                    </button>
+                                </div>
+                            </div>
+                        </footer>
+                    </article>

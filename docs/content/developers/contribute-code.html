@@ -1,0 +1,206 @@
+<!-- Contribute Code -->
+<article class="doc-article">
+    <header class="article-header">
+        <h1 id="contribute-code">Contribute Code</h1>
+        <p class="article-meta">
+            <span>Last updated: July 24, 2025</span>
+            <span>7 min read</span>
+        </p>
+    </header>
+
+    <div class="article-content">
+        <p class="lead">
+            Want to contribute to mnemo's core development? This guide will walk you through the process of setting up your development environment and making your first contribution.
+        </p>
+
+        <h2>Getting Started</h2>
+        <p>
+            Before you start contributing, make sure you have:
+        </p>
+
+        <ul>
+            <li>A GitHub account</li>
+            <li>Visual Studio 2022 or later (recommended IDE)</li>
+            <li>.NET 8.0 SDK or later</li>
+            <li>Basic knowledge of C# and XAML</li>
+        </ul>
+
+        <h2>Development Environment Setup</h2>
+        <p>
+            Follow these steps to set up your development environment:
+        </p>
+
+        <ol>
+            <li><strong>Fork the Repository</strong>
+                <ul>
+                    <li>Visit the <a href="https://github.com/mnemo-org/mnemo" target="_blank" rel="noopener noreferrer">mnemo GitHub repository</a></li>
+                    <li>Click the "Fork" button in the top-right corner</li>
+                    <li>Clone your fork locally: <code>git clone https://github.com/YOUR-USERNAME/mnemo.git</code></li>
+                </ul>
+            </li>
+            <li><strong>Install Dependencies</strong>
+                <ul>
+                    <li>Navigate to the project directory</li>
+                    <li>Run <code>dotnet restore</code> to install dependencies</li>
+                    <li>Install required Visual Studio workloads if prompted</li>
+                </ul>
+            </li>
+            <li><strong>Configure Development Settings</strong>
+                <ul>
+                    <li>Copy <code>appsettings.example.json</code> to <code>appsettings.Development.json</code></li>
+                    <li>Update configuration values as needed</li>
+                </ul>
+            </li>
+        </ol>
+
+        <div class="info-box">
+            <i class="ti ti-info-square-rounded"></i>
+            <div>
+                <strong>Note:</strong> Make sure to read our <a href="https://github.com/mnemo-org/mnemo/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">contribution guidelines</a> before making any changes.
+            </div>
+        </div>
+
+        <h2>Project Structure</h2>
+        <p>
+            The mnemo codebase is organized into several key projects:
+        </p>
+
+        <ul>
+            <li><strong>Mnemo.Core</strong> - Core business logic and domain models</li>
+            <li><strong>Mnemo.UI</strong> - Avalonia UI implementation</li>
+            <li><strong>Mnemo.Data</strong> - Data access and storage</li>
+            <li><strong>Mnemo.Extensions</strong> - Extension system implementation</li>
+            <li><strong>Mnemo.Games</strong> - Game engine integration</li>
+            <li><strong>Mnemo.Tests</strong> - Unit and integration tests</li>
+        </ul>
+
+        <h2>Making Changes</h2>
+        <p>
+            Follow these steps when making changes to the codebase:
+        </p>
+
+        <ol>
+            <li><strong>Create a Branch</strong>
+                <ul>
+                    <li>Create a new branch for your feature: <code>git checkout -b feature/your-feature-name</code></li>
+                    <li>For bug fixes: <code>git checkout -b fix/bug-description</code></li>
+                </ul>
+            </li>
+            <li><strong>Write Code</strong>
+                <ul>
+                    <li>Follow our coding standards and conventions</li>
+                    <li>Add XML documentation for public APIs</li>
+                    <li>Include unit tests for new features</li>
+                </ul>
+            </li>
+            <li><strong>Test Your Changes</strong>
+                <ul>
+                    <li>Run unit tests: <code>dotnet test</code></li>
+                    <li>Perform manual testing</li>
+                    <li>Check for any UI/UX inconsistencies</li>
+                </ul>
+            </li>
+            <li><strong>Submit Your Changes</strong>
+                <ul>
+                    <li>Commit your changes with a descriptive message</li>
+                    <li>Push to your fork: <code>git push origin feature/your-feature-name</code></li>
+                    <li>Create a pull request on GitHub</li>
+                </ul>
+            </li>
+        </ol>
+
+        <div class="tip-box">
+            <i class="ti ti-bulb"></i>
+            <div>
+                <strong>Pro Tip:</strong> Use conventional commits format for your commit messages (e.g., "feat: add dark mode support" or "fix: resolve memory leak in timer").
+            </div>
+        </div>
+
+        <h2>Code Review Process</h2>
+        <p>
+            After submitting your pull request:
+        </p>
+
+        <ol>
+            <li>We will review your code and give you feedback</li>
+            <li>Address any feedback or requested changes</li>
+            <li>Once approved, your code will be merged into the main branch</li>
+        </ol>
+
+        <h2>Best Practices</h2>
+        <p>
+            Follow these best practices when contributing:
+        </p>
+
+        <ul>
+            <li>Keep pull requests focused and small</li>
+            <li>Write clear commit messages</li>
+            <li>Follow SOLID principles</li>
+            <li>Follow the coding standards and conventions</li>
+            <li>Follow the MVVM pattern</li>
+            <li>Use the tools mnemo provides, such as using the overlay service, notification service, etc, instead of reinventing the wheel.</li>
+        </ul>
+
+        <h2>Getting Help</h2>
+        <p>
+            If you need help or have questions:
+        </p>
+
+        <ul>
+            <li>Join our <a href="https://discord.gg/hVjYYru2cb" target="_blank" rel="noopener noreferrer">Discord community</a></li>
+            <li>Check existing GitHub issues</li>
+            <li>Read our <a href="#faq">FAQ</a></li>
+            <li>Contact the core team</li>
+        </ul>
+
+        <h2>Next Steps</h2>
+        <p>
+            Ready to make your first contribution? Check out these resources:
+        </p>
+        
+        <div class="next-steps-grid">
+            <a href="#extensions" class="next-step-card">
+                <i class="ti ti-puzzle"></i>
+                <h3>Create Extensions</h3>
+                <p>Learn how to build extensions</p>
+            </a>
+            <a href="#games" class="next-step-card">
+                <i class="ti ti-device-gamepad"></i>
+                <h3>Develop Games</h3>
+                <p>Create educational games</p>
+            </a>
+            <a href="#api" class="next-step-card">
+                <i class="ti ti-api"></i>
+                <h3>API Reference</h3>
+                <p>Explore the mnemo API</p>
+            </a>
+        </div>
+    </div>
+
+    <footer class="article-footer">
+        <div class="article-navigation">
+            <div class="nav-previous">
+                <span>Previous</span>
+                <a href="#developer-portal">Developer Portal</a>
+            </div>
+            <div class="nav-next">
+                <span>Next</span>
+                <a href="#extensions">Create Extensions</a>
+            </div>
+        </div>
+        
+        <div class="article-feedback">
+            <p>Was this helpful?</p>
+            <div class="feedback-buttons">
+                <button class="feedback-btn positive">
+                    <i class="ti ti-thumb-up"></i>
+                    Yes
+                </button>
+                <button class="feedback-btn negative">
+                    <i class="ti ti-thumb-down"></i>
+                    No
+                </button>
+            </div>
+        </div>
+    </footer>
+</article>
